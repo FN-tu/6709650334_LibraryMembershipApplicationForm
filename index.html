@@ -11,10 +11,10 @@
         <h1>สมัครสมาชิกห้องสมุด</h1>
         <form >
             <label for="fullname-th">ชื่อ - นามสกุล (ภาษาไทย)<span class="required">*</span>:</label>
-            <input type="text" id="fullname-th" name="fullname-th" required placeholder="กรุณากรอกชื่อ - นามสกุล">
+            <input type="text" id="fullname-th" name="fullname-th" pattern="[\u0E00-\u0E7F]+" required placeholder="กรุณากรอกชื่อ - นามสกุล">
 
             <label for="fullname-en">ชื่อ - นามสกุล (ภาษาอังกฤษ)<span class="required">*</span>:</label>
-            <input type="text" id="fullname-en" name="fullname-en" required placeholder="กรุณากรอกชื่อ - นามสกุล">
+            <input type="text" id="fullname-en" name="fullname-en" pattern="[A-Za-z]+" required placeholder="กรุณากรอกชื่อ - นามสกุล">
 
             <label>เพศ<span class="required">*</span>:</label>
             <div class="gender-options">
@@ -27,7 +27,7 @@
             </div>
 
             <label for="student-id">รหัสนักศึกษา<span class="required">*</span>:</label>
-            <input type="text" id="student-id" name="student-id" pattern="\d{10}" required placeholder="กรุณากรอกรหัสนักศึกษา 10 หลัก">
+            <input type="number" id="student-id" name="student-id" pattern="\d{10}" required placeholder="กรุณากรอกรหัสนักศึกษา 10 หลัก">
                     <label for="faculty">คณะที่ศึกษา<span class="required">*</span>:</label>
                     <input list="faculties" id="faculty" name="faculty" required placeholder="กรุณากรอกคณะที่ศึกษา">
                     <datalist id="faculties">
